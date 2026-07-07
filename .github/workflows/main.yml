@@ -1,7 +1,8 @@
 name: Daily_bot2
 
 
-# on:
+on:
+  push: 
 #     workflow_dispatch:
 
 
