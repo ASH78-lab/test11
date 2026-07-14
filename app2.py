@@ -312,6 +312,8 @@ def pin_tod():
                         tournemebt="France - Cup"
                     elif "FIFA - World Cup" in tournemebt:
                         tournemebt="UEFA - Nations League"
+                    elif "Russia - Super Cup" in tournemebt:
+                        tournemebt="Russia - Cup"
 
                   
                     rd=driver.find_elements(By.XPATH,"/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div")
@@ -441,6 +443,9 @@ def pin_tod():
                     tournemebt="France - Cup"
                 elif "FIFA - World Cup" in tournemebt:
                     tournemebt="UEFA - Nations League"
+                elif "Russia - Super Cup" in tournemebt:
+                    tournemebt="Russia - Cup"
+                  
               
                 rd=driver.find_elements(By.XPATH,"/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div")
                 er=len(rd)+1
