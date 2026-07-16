@@ -26,7 +26,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.common.keys import Keys
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
 
 from selenium.common.exceptions import NoSuchElementException
@@ -216,7 +216,9 @@ def pin_tod():
     date_new53 = str(datetime.now())
     print(date_new53)
     a123=time.time()
-    
+    now = datetime.now()
+    future_time = now + timedelta(hours=3)
+    par_tm = future_time.strftime('%d.%m.%Y %H:%M:%S')
     
     
     
@@ -546,7 +548,7 @@ def pin_tod():
                     
                     ert11=date_new256
                     
-                    data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
+                    data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,par_tm])
     
     
             except IndexError:
