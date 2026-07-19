@@ -106,7 +106,7 @@ def pin_tod():
                'Russia - Cup', 
                '-', 
                'Russia - Premier League',
-                 '-', 
+                 'Russia - Super Cup', 
                  'Russia - First League', 
                  'UEFA - Champions League', 
                  'UEFA - Europa League', 
