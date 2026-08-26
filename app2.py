@@ -197,7 +197,68 @@ def pin_tod():
             new.append(slovar2[i])
         else:
             pass
-        
+          
+    asd78=[
+      'https://www.betexplorer.com/football/england/fa-cup/fixtures/',
+      'https://www.betexplorer.com/football/england/fa-community-shield/fixtures/',
+       'https://www.betexplorer.com/football/france/super-cup/fixtures/',
+       'https://www.betexplorer.com/football/germany/super-cup/fixtures/',
+       'https://www.betexplorer.com/football/italy/super-cup/fixtures/',
+       'https://www.betexplorer.com/football/spain/super-cup/fixtures/',
+       'https://www.betexplorer.com/football/russia/russian-cup/fixtures/?stage=CKtlqjHH',
+       'https://www.betexplorer.com/football/russia/super-cup/fixtures/',
+       'https://www.betexplorer.com/football/europe/uefa-super-cup/fixtures/',
+       'https://www.betexplorer.com/football/europe/euro-2024/fixtures/?stage=Ya0Rvy04',
+       'https://www.betexplorer.com/football/europe/euro-2024/fixtures/?stage=SMaVweFA',
+       'https://www.betexplorer.com/football/europe/uefa-nations-league/fixtures/?stage=QgTkX5FP',
+       'https://www.betexplorer.com/football/europe/uefa-nations-league/fixtures/?stage=pvAMRqwm',
+       'https://www.betexplorer.com/football/europe/uefa-nations-league/fixtures/?stage=OU8QQ3hg',
+       'https://www.betexplorer.com/football/europe/uefa-nations-league/fixtures/?stage=h4DUPN7a',
+       'https://www.betexplorer.com/football/europe/uefa-nations-league-2024-2025/fixtures/?stage=2FKHSPNt',
+      'https://www.betexplorer.com/football/world/friendly-international/',
+      'https://www.betexplorer.com/football/world/world-championship-2026/fixtures/?stage=QmflJo77&activecountry=8bP2bXmH',
+      # 'https://www.betexplorer.com/football/world/world-cup-2026/fixtures/',
+      ]
+      
+    asd79=[
+      'https://www.pinnacle.com/en/soccer/england-fa-cup/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/england-community-shield/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/france-super-cup/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/germany-super-cup/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/italy-super-cup/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/spain-super-cup/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/russia-cup-regions-path/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/russia-super-cup/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/uefa-super-cup/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/uefa-euro-qualifiers/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/uefa-euro/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/uefa-nations-league-a/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/uefa-nations-league-b/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/uefa-nations-league-c/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/uefa-nations-league-d/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/uefa-nations-league-playoffs/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/international-friendlies/matchups/#period:0',
+      'https://www.pinnacle.com/en/soccer/fifa-world-cup-qualifiers-europe/matchups/#period:0',
+      # 'https://www.pinnacle.com/en/soccer/fifa-world-cup/matchups/#period:0',
+      ]
+      
+    slovar2= dict(zip(asd78,asd79))  
+  
+    new2=[]
+    for i in asd78:
+        URL = i
+        req = requests.get(URL, headers=headers)
+        src = req.text
+        soup = BeautifulSoup(src, 'lxml')
+        a=soup.text
+        if "Today" in a:
+            new2.append(slovar2[i])
+        else:
+            pass
+          
+    new5=new+new2
+    link20 = set(new5)
+    new = list(link20)
     
     
     
