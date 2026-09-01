@@ -644,7 +644,7 @@ def pin_tod():
          'A',
          'Столбец11']
     df = pd.DataFrame(data, columns=header)
-    df = df.loc[df['X'] != '-']
+    df = df.loc[df['H'] != '-']
     
     print(df)
     driver.quit()
