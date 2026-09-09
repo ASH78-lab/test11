@@ -646,6 +646,18 @@ def pin_tod():
          'Столбец11']
     df = pd.DataFrame(data, columns=header)
     df = df.loc[df['H'] != '-']
+    df.loc[df['X'] == '-', 'X'] = 15
+    handicap_str = df['handicap'].astype(str)
+    is_negative = handicap_str.str.startswith('-')
+    is_positive = handicap_str.str.startswith('-')
+    
+
+    df.loc[(df['1'] == '-') & is_negative, '1'] = '1.01'
+    df.loc[(df['2'] == '-') & is_negative, '2'] = '30'
+    
+
+    df.loc[(df['1'] == '-') & ~is_positive, '1'] = '30'
+    df.loc[(df['2'] == '-') & ~is_positive, '2'] = '1.01'
     
     print(df)
     driver.quit()
